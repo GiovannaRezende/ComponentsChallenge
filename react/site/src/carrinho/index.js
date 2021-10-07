@@ -1,30 +1,31 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useState, useEffect} from 'react';
-
 import Cookie from 'js-cookie';
-import CarrinhoItem from './carrinhoItem'
+import CarrinhoItem from './carrinhoItem';
+import { Container } from './styled';
 
 export default function Carrinho(){
     const [produtos, setProdutos] = useState([]);
 
-    useEffect(carregandoCarrinho, []);
+    useEffect(carregarCarrinho, []);
 
     function carregarCarrinho() {
-        let carrinho = Cookie.get("carrinho")
+        let carrinho = Cookie.get('carrinho')
         carrinho = carrinho !== undefined ? JSON.parse(carrinho) : [];
+
+        console.log(carrinho);
 
         setProdutos(carrinho);
     }
 
     function removerProduto(id) {
-        let carrinho = produtos.filter(item => itemm.id !== id);
+        let carrinho = produtos.filter(item => item.id !== id);
         Cookie.set('carrinho', JSON.stringify(carrinho));
         setProdutos([...carrinho]);
     }
 
     function alterarProduto(id, qtd) {
-        let produtoAlterado = produtos.filter(item => item.id !== id) [0];
+        let produtoAlterado = produtos.filter(item => item.id === id) [0];
         produtoAlterado.qtd = qtd;
         Cookie.set('carrinho', JSON.stringify(produtos));
     }
@@ -36,10 +37,9 @@ export default function Carrinho(){
         <Link to="/">Voltar</Link>
 
         <div className="itens">
-            {produtos.imap(item => 
+            {produtos.map(item => 
                 <CarrinhoItem key={item.id} info={item} onUpdate={alterarProduto} onRemove={removerProduto}/>)}
         </div>
-
         </Container>
     )
 }

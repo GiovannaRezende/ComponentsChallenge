@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Cookie from 'js-cookie';
 import Contador from '../contador';
 import { Container, RemoverIcon } from './styled';
 
