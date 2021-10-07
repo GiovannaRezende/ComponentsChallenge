@@ -4,7 +4,7 @@ import { Container } from '../home/styled';
 export default function Produto(props) {
     return(
         <Container>
-            <img className="capa" src={props.info.imagem} alt=""/>
+            <div><img className="capa" src={props.info.imagem} alt=""/></div>
             <div className="titulo">{props.info.titulo}</div>
             <div className="preco">{props.info.preco}</div>
 
