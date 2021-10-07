@@ -28,13 +28,13 @@ export default function DetalheProduto(props) {
                     
                     <div><img src={produto.imagem} alt=""/></div>
                     <div>{produto.titulo}</div>
-                    <div>{produto.preco}</div>
+                    <div className="preco">{produto.preco}</div>
                 </div>
-                <div>
-                    <h1>Descrição</h1>
+                <div className="infos">
+                    <h2>Descrição</h2>
                     <div>{produto.descricao}</div>
 
-                    <h1>Especificações</h1>
+                    <h2>Especificações</h2>
                     <div>{produto.especificacoes}</div>
                     <div><button onClick={comprar}>Comprar</button></div>
                 </div>

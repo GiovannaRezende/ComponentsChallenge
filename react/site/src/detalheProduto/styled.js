@@ -2,12 +2,21 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 2em;
+
 
 img {
     width: 10em;
     height: 10em;
+}
+
+.preco {
+    font-weight: bold;
+}
+
+.infos {
+    padding: 0em 2em;
 }
 
 button {
@@ -17,6 +26,7 @@ button {
     border: none;
     padding: .7em 1em;
     border-radius: 1.2em;
+    margin-top: .8em;
 }
 `
 

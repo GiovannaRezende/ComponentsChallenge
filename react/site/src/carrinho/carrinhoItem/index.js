@@ -40,7 +40,7 @@ export default function CarrinhoItem(props) {
                 {produto.preco}
             </div>
 
-            <div className="remover"><RemoverIcon onClik={remover}/></div>
+            <div className="remover"><RemoverIcon onClick={remover}/></div>
         </Container>
     )
 }
