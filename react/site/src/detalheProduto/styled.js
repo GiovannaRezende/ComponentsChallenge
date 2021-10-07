@@ -11,8 +11,13 @@ img {
     height: 10em;
 }
 
+
+.titulo {
+    font: 700 1.5em Roboto;
+}
+
 .preco {
-    font-weight: bold;
+    font: 500 1em Roboto;
 }
 
 .infos {

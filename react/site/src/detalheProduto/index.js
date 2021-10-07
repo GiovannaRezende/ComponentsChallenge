@@ -27,7 +27,7 @@ export default function DetalheProduto(props) {
                     <h1>Detalhes do Produto</h1>
                     
                     <div><img src={produto.imagem} alt=""/></div>
-                    <div>{produto.titulo}</div>
+                    <div className="titulo">{produto.titulo}</div>
                     <div className="preco">{produto.preco}</div>
                 </div>
                 <div className="infos">
