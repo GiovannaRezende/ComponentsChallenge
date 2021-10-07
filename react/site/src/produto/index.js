@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Container } from '../home/styled';
+import { Container } from './styled';
 
 export default function Produto(props) {
     return(
         <Container>
-            <div><img className="capa" src={props.info.imagem} alt=""/></div>
+            <img className="capa" src={props.info.imagem} alt=""/>
             <div className="titulo">{props.info.titulo}</div>
             <div className="preco">{props.info.preco}</div>
 

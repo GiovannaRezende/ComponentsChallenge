@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 const Container = styled.div `
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    margin: 1em;
     box-shadow: 0px 0px 5px 1px #d5d4d6;
 
-
-    .capa img {
-        width: 2em;
-        height: 2em;
+    .capa {
+        width: 5em;
+        height: 5em;
     }
 
     .titulo {
@@ -16,7 +18,7 @@ const Container = styled.div `
     }
 
     .preco {
-        font: 400 .8em Roboto;
+        font: 500 .9em Roboto;
     }
 
     button {

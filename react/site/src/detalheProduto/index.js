@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Container } from "../home/styled";
+import { useState } from 'react';
+import { Container } from './styled';
 import { Link, useHistory} from 'react-router-dom';
 import Cookie from 'js-cookie';
 
@@ -18,7 +18,8 @@ export default function DetalheProduto(props) {
         Cookie.set('carrinho', JSON.stringify(carrinho));
 
         navigation.push('/carrinho');
-
+    }
+    
         return(
             <Container>
                 <div>
@@ -35,10 +36,9 @@ export default function DetalheProduto(props) {
 
                     <h1>Especificações</h1>
                     <div>{produto.especificacoes}</div>
-                    <div><button> onClick={comprar}Comprar</button></div>
+                    <div><button onClick={comprar}>Comprar</button></div>
                 </div>
             </Container>
         )
-    }
 }
 

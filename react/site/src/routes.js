@@ -4,7 +4,7 @@ import Home from './home/index';
 import Produto from './produto/index';
 import CarrinhoItem from './carrinho/carrinhoItem/index';
 import Contador from './carrinho/contador/index';
-import detalheProduto from './detalheProduto/index';
+import DetalheProduto from './detalheProduto/index';
 
 export default function Routes() {
     return (
@@ -14,7 +14,7 @@ export default function Routes() {
                 <Route path="/produto" exact={true} component={Produto} />
                 <Route path="/carrinho-item" exact={true} component={CarrinhoItem} />
                 <Route path="/contador" exact={true} component={Contador} />
-                <Route path="/detalheProduto" exact={true} component={detalheProduto} />
+                <Route path="/detalhe" exact={true} component={DetalheProduto} />
             </Switch>
         </BrowserRouter>
     )

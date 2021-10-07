@@ -1,4 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useState, useEffect} from 'react';
+
+import Cookie from 'js-cookie';
+import CarrinhoItem from './carrinhoItem'
 
 export default function Carrinho(){
     const [produtos, setProdutos] = useState([]);

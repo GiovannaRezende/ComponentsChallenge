@@ -7,9 +7,8 @@ const Container = styled.div `
     align-items: center;
 
     .titulo {
-        font: 700 2em Roboto;
+        font: 700 1.5em Roboto;
         color: black;
-        margin-bottom: 1.5em;
     }
 
     button {
