@@ -18,25 +18,24 @@ export default function CarrinhoItem(props) {
     return (
         <Container>
             <div>
-                <img className="capa" src={produto.imagem} alt=""/>
-                <Contador onChange={alterarQtd} value={produto.qtd}/>
+                <img className="capa" src={produto.imagem} alt="" />
+                <Contador onChange={alterarQtd} value={produto.qtd} />
             </div>
 
-            <div>
-                <div className="titulo"/>
+            <div className="titulo">
                 {produto.titulo}
             </div>
 
-            <div>
-                <div className="preco"/>
-                <span>Preço unitário</span>
+            
+            <div className="preco">
+                <span>Preço unitário </span>
                 {produto.preco}
             </div>
 
-            <div>
-                <div className="qtd"/>
-                <span>Qtd</span>
-                {produto.preco}
+            
+            <div className="qtd">
+                <span> Quantidade: </span>
+                {produto.qtd}
             </div>
 
             <div className="remover"><RemoverIcon onClick={remover}/></div>

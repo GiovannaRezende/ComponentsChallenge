@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cookie from 'js-cookie';
-import CarrinhoItem from './carrinhoItem';
+import CarrinhoItem from './carrinhoItem/index';
 import { Container } from './styled';
 
 export default function Carrinho(){
@@ -16,6 +16,7 @@ export default function Carrinho(){
         console.log(carrinho);
 
         setProdutos(carrinho);
+
     }
 
     function removerProduto(id) {
@@ -25,21 +26,22 @@ export default function Carrinho(){
     }
 
     function alterarProduto(id, qtd) {
-        let produtoAlterado = produtos.filter(item => item.id === id) [0];
+        let produtoAlterado = produtos.filter(item => item.id === id)[0];
         produtoAlterado.qtd = qtd;
         Cookie.set('carrinho', JSON.stringify(produtos));
+
     }
 
     return (
         <Container>
-            <h1>Carrinho</h1>
-
-        <Link to="/">Voltar</Link>
-
-        <div className="itens">
-            {produtos.map(item => 
-                <CarrinhoItem key={item.id} info={item} onUpdate={alterarProduto} onRemove={removerProduto}/>)}
-        </div>
+            <h1> Carrinho </h1>
+            <Link to="/"> Voltar </Link>
+  
+            <div className="itens">
+                {produtos.map(item => 
+              <CarrinhoItem key={item.id} info={item} onUpdate={alterarProduto} onRemove={removerProduto} />
+            )}
+            </div>
         </Container>
     )
 }

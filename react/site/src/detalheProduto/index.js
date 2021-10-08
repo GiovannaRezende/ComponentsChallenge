@@ -12,8 +12,14 @@ export default function DetalheProduto(props) {
         let carrinho = Cookie.get('carrinho');
         carrinho = carrinho !== undefined ? JSON.parse(carrinho) : [];
 
+        console.log(produto);
+        console.log(carrinho);
+
         if (carrinho.some(item => item.id === produto.id) === false)
-        carrinho.push({...produto, qtd: 1});
+            carrinho.push({...produto, qtd: 1});
+
+        console.log(carrinho);
+        console.log(JSON.stringify(carrinho));
 
         Cookie.set('carrinho', JSON.stringify(carrinho));
 

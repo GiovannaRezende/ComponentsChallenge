@@ -5,7 +5,7 @@ import Produto from './produto/index';
 import Contador from './carrinho/contador/index';
 import DetalheProduto from './detalheProduto/index';
 import Comunicacao from './comunicacaoComps/contador/index';
-import Carrinho from './carrinho/carrinhoItem/index';
+import Carrinho from './carrinho/index';
 
 export default function Routes() {
     return (
